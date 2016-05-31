@@ -241,7 +241,8 @@ script_execute(scr_input);
 //End of Input
 
 //Variabls
-invert = false;
+invert_x = false;
+invert_y = false;
 m_x = mouse_x;
 m_y = mouse_y;
 tar_x = m_x - x
@@ -250,29 +251,51 @@ tar_y = m_y - y
 if (tar_x &lt; 0)
 {
     tar_x = tar_x * -1
-    invert = true
+    invert_x = true
 }
+if (tar_y &lt; 0)
+{
+    tar_y = tar_y * -1
+    invert_y = true   
+}
+
 //End
 if (key_tp)
 {
     if (cantp) 
     {
-            if (tar_x &lt; tprange &amp;&amp; invert = false)
+            if (tar_x &lt; tprange &amp;&amp; invert_x = false)
             {
-            x += tar_x 
+            x += tar_x;
             }
-            if (tar_x &lt; tprange &amp;&amp; invert = true)
+            if (tar_x &lt; tprange &amp;&amp; invert_x = true)
             {
-            x -= tar_x
+            x -= tar_x;
             }
-            if (tar_x &gt; tprange &amp;&amp; invert = false)
+            if (tar_x &gt; tprange &amp;&amp; invert_x = false)
             {
-            x += tprange
+            x += tprange;
             }
-            if (tar_x &gt; tprange &amp;&amp; invert = true)
+            if (tar_x &gt; tprange &amp;&amp; invert_x = true)
             {
-            x -= tprange
-        }
+            x -= tprange;
+            }
+            if (tar_y &lt; tprange &amp;&amp; invert_y = false)
+            {
+            y += tar_y;
+            }
+            if (tar_y &gt; tprange &amp;&amp; invert_y = false)
+            {
+            y += tprange;
+            }
+            if (tar_y &lt; tprange &amp;&amp; invert_y = true)
+            {
+            y -= tar_y;
+            }
+            if (tar_y &gt; tprange &amp;&amp; invert_y = true)
+            {
+            y -= tprange;
+            }
     }
 }
 </string>
