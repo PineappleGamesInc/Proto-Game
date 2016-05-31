@@ -244,10 +244,10 @@ script_execute(scr_input);
 invert_x = false;
 invert_y = false;
 m_x = mouse_x;
-m_y = mouse_y;
 tar_x = m_x - x
 tar_y = m_y - y
-//This part checks if you are wanting to go left or right for the tp
+m_y = mouse_y;
+//This part inverts the result of the tp so that plr can go right and up
 if (tar_x &lt; 0)
 {
     tar_x = tar_x * -1
