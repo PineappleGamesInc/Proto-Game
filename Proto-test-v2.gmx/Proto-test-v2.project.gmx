@@ -15,6 +15,7 @@
     <sprite>sprites\spr_plr_ladder</sprite>
     <sprite>sprites\spr_curser_green</sprite>
     <sprite>sprites\spr_curser_red</sprite>
+    <sprite>sprites\spr_fire</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -29,6 +30,7 @@
     <object>objects\obj_test</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_fire</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
