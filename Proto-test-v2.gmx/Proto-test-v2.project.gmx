@@ -16,6 +16,7 @@
     <sprite>sprites\spr_curser_green</sprite>
     <sprite>sprites\spr_curser_red</sprite>
     <sprite>sprites\spr_fire</sprite>
+    <sprite>sprites\spr_slime_sheet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

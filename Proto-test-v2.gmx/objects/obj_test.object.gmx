@@ -62,139 +62,6 @@ tprange = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement
-
-//Input
-script_execute(scr_input)
-//End of Input
-//Results for inputs
-    move = key_right - key_left;
-    hsp = move * movespeed; 
-    if (vsp &lt; 20) vsp += grav;
-    if (place_meeting(x,y+1,obj_block))
-    {
-    vsp = key_jump * jumpspeed
-    }
-//End of input results
-
-//applying result
-
-    //hcoll
-    if (place_meeting(x+hsp,y,obj_block))
-    {
-        while(!place_meeting(x+sign(hsp),y,obj_block))
-        {
-            x += sign(hsp);
-        }
-        hsp = 0;
-    }
-    x += hsp;
-    //End of hcoll
-    
-    //vcoll
-    if (place_meeting(x,y+vsp,obj_block))
-    {
-        while(!place_meeting(x,y+sign(vsp),obj_block))
-        {
-            y += sign(vsp);
-        }
-        vsp = 0;
-    }
-    y += vsp;
-    //End of vcoll
-//End of applying result
-
-//Ladders
-
-    if (key_up || key_down || place_meeting(x,y,obj_ladder)) 
-    {
-        if place_meeting(x,y-1, obj_ladder) ladder = true;
-    }
-    
-    if (ladder = true) 
-    {
-        vsp = 0;
-        //hsp = 0;
-        if (key_up) vsp = -2;
-        if (key_down) vsp = 2;
-        if !place_meeting (x,y,obj_ladder) ladder = false;
-        if (key_jump) ladder = false;
-    }
-//End of Ladders
-
-//Animation
-
-    if keyboard_check_pressed (ord("A"))
-    {
-        
-        sprite_index = spr_plr_move
-        image_xscale = 1
-        image_index = 0
-        global.dir = 180
-    }
-    
-    if keyboard_check_pressed (ord("D"))
-    {
-        
-        sprite_index = spr_plr_move
-        image_xscale = -1
-        image_index = 0
-        global.dir = 0
-    }
-    //Changes animation mid-air when jumping
-        if (sprite_index = spr_plr_idle and hsp &gt; 1)
-        {
-            
-            sprite_index = spr_plr_move
-        }
-    
-    
-    
-    if place_meeting (x,y+1,obj_block)
-    {
-    onground = true
-        if (onground)
-        {
-            if (hsp == 0)
-            {
-                image_speed = 0.3;
-                sprite_index = spr_plr_idle;
-            }
-        }
-    }
-    
-    //Ladder animation change
-    
-    if (ladder &amp;&amp; key_up)
-    {
-        if (sprite_index = spr_plr_idle)
-        {
-            sprite_index = spr_plr_ladder
-        }
-    }
-    //End of Ladder animation change
-    
-//End of Animation
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Combat
 //Inputs
     script_execute(scr_input);
@@ -324,6 +191,139 @@ if (key_tp)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Movement
+
+//Input
+script_execute(scr_input)
+//End of Input
+//Results for inputs
+    move = key_right - key_left;
+    hsp = move * movespeed; 
+    if (vsp &lt; 20) vsp += grav;
+    if (place_meeting(x,y+1,obj_block))
+    {
+    vsp = key_jump * jumpspeed
+    }
+//End of input results
+
+//applying result
+
+    //hcoll
+    if (place_meeting(x+hsp,y,obj_block))
+    {
+        while(!place_meeting(x+sign(hsp),y,obj_block))
+        {
+            x += sign(hsp);
+        }
+        hsp = 0;
+    }
+    x += hsp;
+    //End of hcoll
+    
+    //vcoll
+    if (place_meeting(x,y+vsp,obj_block))
+    {
+        while(!place_meeting(x,y+sign(vsp),obj_block))
+        {
+            y += sign(vsp);
+        }
+        vsp = 0;
+    }
+    y += vsp;
+    //End of vcoll
+//End of applying result
+
+//Ladders
+
+    if (key_up || key_down || place_meeting(x,y,obj_ladder)) 
+    {
+        if place_meeting(x,y-1, obj_ladder) ladder = true;
+    }
+    
+    if (ladder = true) 
+    {
+        vsp = 0;
+        //hsp = 0;
+        if (key_up) vsp = -2;
+        if (key_down) vsp = 2;
+        if !place_meeting (x,y,obj_ladder) ladder = false;
+        if (key_jump) ladder = false;
+    }
+//End of Ladders
+
+//Animation
+
+    if keyboard_check_pressed (ord("A"))
+    {
+        
+        sprite_index = spr_plr_move
+        image_xscale = 1
+        image_index = 0
+        global.dir = 180
+    }
+    
+    if keyboard_check_pressed (ord("D"))
+    {
+        
+        sprite_index = spr_plr_move
+        image_xscale = -1
+        image_index = 0
+        global.dir = 0
+    }
+    //Changes animation mid-air when jumping
+        if (sprite_index = spr_plr_idle and hsp &gt; 1)
+        {
+            
+            sprite_index = spr_plr_move
+        }
+    
+    
+    
+    if place_meeting (x,y+1,obj_block)
+    {
+    onground = true
+        if (onground)
+        {
+            if (hsp == 0)
+            {
+                image_speed = 0.3;
+                sprite_index = spr_plr_idle;
+            }
+        }
+    }
+    
+    //Ladder animation change
+    
+    if (ladder &amp;&amp; key_up)
+    {
+        if (sprite_index = spr_plr_idle)
+        {
+            sprite_index = spr_plr_ladder
+        }
+    }
+    //End of Ladder animation change
+    
+//End of Animation
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="64">
       <action>
@@ -347,7 +347,7 @@ draw_text(20,20,mouse_x)
 draw_text(20,40, mouse_y)
 draw_text(20,60, x)
 draw_text(20,80, y)
-draw_healthbar(x-5,y-5,x+5,y+5,hp,c_black,c_red,c_green, 0,true,true);
+draw_text(20,100, hp)
 </string>
           </argument>
         </arguments>
@@ -372,6 +372,29 @@ draw_healthbar(x-5,y-5,x+5,y+5,hp,c_black,c_red,c_green, 0,true,true);
             <kind>1</kind>
             <string>x = 464
 y = 464
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hp -= 10
 </string>
           </argument>
         </arguments>
