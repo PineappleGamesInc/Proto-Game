@@ -6,17 +6,22 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_block</sprite>
-    <sprite>sprites\spr_ladder</sprite>
-    <sprite>sprites\spr_plr_idle</sprite>
-    <sprite>sprites\spr_plr_move</sprite>
     <sprite>sprites\spr_enemy_idle</sprite>
     <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\spr_plr_ladder</sprite>
-    <sprite>sprites\spr_curser_green</sprite>
-    <sprite>sprites\spr_curser_red</sprite>
-    <sprite>sprites\spr_fire</sprite>
-    <sprite>sprites\spr_slime_sheet</sprite>
+    <sprites name="Enviroment">
+      <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_fire</sprite>
+      <sprite>sprites\spr_ladder</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\spr_plr_idle</sprite>
+      <sprite>sprites\spr_plr_vertical</sprite>
+      <sprite>sprites\spr_plr_move</sprite>
+      <sprite>sprites\spr_slime_sheet</sprite>
+    </sprites>
+    <sprite>sprites\spr_healthbar_border</sprite>
+    <sprite>sprites\spr_healthbar_bg</sprite>
+    <sprite>sprites\spr_healthbar_inner</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
