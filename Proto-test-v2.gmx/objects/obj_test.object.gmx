@@ -39,6 +39,7 @@ global.dir = 0;
 ammo = 10;
 canatk = true;
 cantp = true;
+canflash = true;
 tprange = 100;
 </string>
           </argument>
@@ -308,6 +309,49 @@ if (key_tp)
             }
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Flash points
+
+if key_flash
+{
+    if canflash &amp;&amp; object_exists(obj_flash)
+    {
+        x = obj_flash.x
+        y = obj_flash.y
+    }
+}
+
+
+
+
+/*if (canflash)
+    {
+     if (key_flash)
+     {
+        canflash = false;
+        instance_create(x,y,obj_flash)
+        
+     }   
+    }
 </string>
           </argument>
         </arguments>
