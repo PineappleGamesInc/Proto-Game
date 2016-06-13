@@ -6,12 +6,12 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_enemy_idle</sprite>
-    <sprite>sprites\spr_bullet</sprite>
     <sprites name="Enviroment">
       <sprite>sprites\spr_block</sprite>
       <sprite>sprites\spr_fire</sprite>
       <sprite>sprites\spr_ladder</sprite>
+      <sprite>sprites\spr_phy_block</sprite>
+      <sprite>sprites\spr_phy_crate</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_plr_idle</sprite>
@@ -19,27 +19,47 @@
       <sprite>sprites\spr_plr_vertical</sprite>
       <sprite>sprites\spr_plr_move</sprite>
       <sprite>sprites\spr_slime_sheet</sprite>
+      <sprites name="Player items">
+        <sprite>sprites\spr_grenade</sprite>
+        <sprite>sprites\spr_bullet</sprite>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_healthbar_border</sprite>
-    <sprite>sprites\spr_healthbar_bg</sprite>
-    <sprite>sprites\spr_healthbar_inner</sprite>
+    <sprites name="HUD">
+      <sprite>sprites\spr_healthbar_inner</sprite>
+      <sprite>sprites\spr_healthbar_bg</sprite>
+      <sprite>sprites\spr_healthbar_border</sprite>
+    </sprites>
+    <sprites name="Enemys">
+      <sprite>sprites\spr_enemy_idle</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_gr</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_input.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_block</object>
-    <object>objects\obj_ladder</object>
-    <object>objects\obj_test</object>
     <object>objects\obj_enemy</object>
-    <object>objects\obj_bullet</object>
-    <object>objects\obj_fire</object>
-    <object>objects\obj_flash</object>
+    <objects name="Enviroment">
+      <object>objects\obj_block</object>
+      <object>objects\obj_ladder</object>
+      <object>objects\obj_fire</object>
+      <object>objects\obj_phy_block</object>
+    </objects>
+    <objects name="Player Objects">
+      <object>objects\obj_test</object>
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_flash</object>
+      <object>objects\obj_grenadenew</object>
+      <object>objects\obj_grenade</object>
+    </objects>
+    <object>objects\obj_phy_crate</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room_test</room>
   </rooms>

@@ -8,5 +8,6 @@
     key_shift = keyboard_check (vk_shift);
     key_flash = keyboard_check (ord("Q"));
     key_shoot = keyboard_check_pressed(ord("F"));
-    key_tp = mouse_check_button_pressed(mb_left)
+    key_tp = mouse_check_button_pressed(mb_left);
+    key_y = keyboard_check_pressed(ord("Y"));
 //End of inputs
