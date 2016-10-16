@@ -10,8 +10,6 @@
       <sprite>sprites\spr_block</sprite>
       <sprite>sprites\spr_fire</sprite>
       <sprite>sprites\spr_ladder</sprite>
-      <sprite>sprites\spr_phy_block</sprite>
-      <sprite>sprites\spr_phy_crate</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_plr_idle</sprite>
@@ -48,18 +46,13 @@
       <object>objects\obj_block</object>
       <object>objects\obj_ladder</object>
       <object>objects\obj_fire</object>
-      <object>objects\obj_phy_block</object>
     </objects>
     <objects name="Player Objects">
       <object>objects\obj_test</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_flash</object>
-      <object>objects\obj_grenadenew</object>
-      <object>objects\obj_grenade</object>
     </objects>
-    <object>objects\obj_phy_crate</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room_test</room>
   </rooms>
